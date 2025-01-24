@@ -1,32 +1,30 @@
 import {
   layer,
   map,
-  NumberKeyValue,
   rule,
-  withMapper,
+  toApp,
   writeToProfile,
 } from 'karabiner.ts'
 
-// ! Change '--dry-run' to your Karabiner-Elements Profile name.
-// (--dry-run print the config json into console)
-// + Create a new profile if needed.
-writeToProfile('--dry-run', [
-  // It is not required, but recommended to put symbol alias to layers,
-  // (If you type fast, use simlayer instead, see https://evan-liu.github.io/karabiner.ts/rules/simlayer)
-  // to make it easier to write '←' instead of 'left_arrow'.
-  // Supported alias: https://github.com/evan-liu/karabiner.ts/blob/main/src/utils/key-alias.ts
-  layer('/', 'symbol-mode').manipulators([
-    //     / + [ 1    2    3    4    5 ] =>
-    withMapper(['⌘', '⌥', '⌃', '⇧', '⇪'])((k, i) =>
-      map((i + 1) as NumberKeyValue).toPaste(k),
-    ),
-    withMapper(['←', '→', '↑', '↓', '␣', '⏎', '⇥', '⎋', '⌫', '⌦', '⇪'])((k) =>
-      map(k).toPaste(k),
-    ),
+writeToProfile('default', [
+  // Map CAPS_LOCK ⇪ to Hyper ⌘⌥⌃⇧, and keep as ⇪ if alone (or map to another key if alone, e.g. toIfAlone('escape') for ⎋).
+  // https://karabiner.ts.evanliu.dev/examples/modifier-keys/caps_lock-to-hyper
+  rule('Caps Lock → Hyper').manipulators([
+    map('caps_lock').toHyper().toIfAlone('caps_lock'),
   ]),
 
-  rule('Key mapping').manipulators([
-    // config key mappings
-    map(1).to(1)
-  ]),
+  // launch apps via shortcut keys
+  layer('l', 'launch-app').manipulators({
+    // browser (l + b)
+    b: toApp('Firefox'),
+    // file explorer / finder (l + f)
+    f: toApp('Finder'),
+    // terminal (l + t)
+    t: toApp('Ghostty'),
+    // chat app (l + c)
+    c: toApp('Microsoft Teams'),
+    // mail app (l + m)
+    m: toApp('Microsoft Outlook.'),
+  }),
+
 ])
