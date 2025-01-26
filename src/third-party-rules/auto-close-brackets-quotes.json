@@ -1,0 +1,234 @@
+{
+	"title": "Auto close brackets & quotes",
+	"maintainers": [
+		"harmtemolder"
+	],
+	"rules": [
+		{
+			"description": "(2/2) Auto close brackets & quotes ( (), '', \"\", ``, [], {}, \u201c\u201d, \u2018\u2019, <> )",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "9",
+						"modifiers": {
+							"mandatory": [
+								"shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "9",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "0",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "quote"
+					},
+					"to": [
+						{
+							"key_code": "quote"
+						},
+						{
+							"key_code": "quote"
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "quote",
+						"modifiers": {
+							"mandatory": [
+								"shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "quote",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "quote",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "grave_accent_and_tilde"
+					},
+					"to": [
+						{
+							"key_code": "grave_accent_and_tilde"
+						},
+						{
+							"key_code": "grave_accent_and_tilde"
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "open_bracket"
+					},
+					"to": [
+						{
+							"key_code": "open_bracket"
+						},
+						{
+							"key_code": "close_bracket"
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "open_bracket",
+						"modifiers": {
+							"mandatory": [
+								"shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "open_bracket",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "close_bracket",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "open_bracket",
+						"modifiers": {
+							"mandatory": [
+								"option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "open_bracket",
+							"modifiers": [
+								"option"
+							]
+						},
+						{
+							"key_code": "open_bracket",
+							"modifiers": [
+								"option",
+								"shift"
+							]
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "close_bracket",
+						"modifiers": {
+							"mandatory": [
+								"option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "close_bracket",
+							"modifiers": [
+								"option"
+							]
+						},
+						{
+							"key_code": "close_bracket",
+							"modifiers": [
+								"option",
+								"shift"
+							]
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "comma",
+						"modifiers": {
+							"mandatory": [
+								"shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "comma",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "period",
+							"modifiers": [
+								"shift"
+							]
+						},
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				}
+			]
+		}
+	]
+}
