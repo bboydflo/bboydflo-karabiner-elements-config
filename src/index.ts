@@ -13,10 +13,13 @@ import {
 import { raycastWin } from './utils'
 
 writeToProfile('default', [
-  // Map CAPS_LOCK ⇪ to Hyper ⌘⌥⌃⇧, and keep as ⇪ if alone (or map to another key if alone, e.g. toIfAlone('escape') for ⎋).
+  // Map CAPS_LOCK ⇪ to Meh ⌥⌃⇧, and keep as ⇪ if alone (or map to another key if alone, e.g. toIfAlone('escape') for ⎋).
   // https://karabiner.ts.evanliu.dev/examples/modifier-keys/caps_lock-to-hyper
-  rule('Caps Lock → Hyper').manipulators([
-    map('caps_lock').toHyper().toIfAlone('caps_lock'),
+  rule('Caps Lock → Meh').manipulators([
+    map('caps_lock').toMeh().toIfAlone('caps_lock'),
+  ]),
+  rule('Escape → Hyper').manipulators([
+    map('escape').toHyper().toIfAlone('escape'),
   ]),
 
   // Raycast based window management
