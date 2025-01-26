@@ -39,6 +39,10 @@ writeToProfile('default', [
       5: raycastWin('last-two-thirds'),
       9: raycastWin('left-half'),
       0: raycastWin('right-half'),
+      'h': raycastWin('left-half'),
+      'l': raycastWin('right-half'),
+      'j': raycastWin('bottom-half'),
+      'k': raycastWin('top-half'),
     }),
   ]),
 
@@ -57,21 +61,27 @@ writeToProfile('default', [
     l: toKey('q', '⌘⌃'), // Lock screens
   }),
 
-  // launch apps via shortcut keys
-  layer('l', 'launch-app').manipulators({
-    // browser (l + b)
-    b: toApp('Firefox'),
-    // file explorer / finder (l + f)
-    f: toApp('Finder'),
-    // terminal (l + t)
-    t: toApp('Ghostty'),
-    // chat app (l + c)
-    c: toApp('Microsoft Teams'),
-    // mail app (l + m)
-    m: toApp('Microsoft Outlook'),
-    // System settings (l + ,)
-    ',': toApp('System Settings'),
-  }),
+  // Open apps via shortcut hyper+o keys
+  hyperLayer('o')
+    .description('Open Apps')
+    .leaderMode()
+    .notification('Open apps:\nb(browser - Firefox), c(chat - MS Teams), e(editor - VS Code),\nf(file explorer - Finder), t(terminal - Ghostty), m(mail - MS Outlook),\n","(System Settings)')
+    .manipulators({
+      // browser (+ b)
+      b: toApp('Firefox'),
+      // chat app (+ c)
+      c: toApp('Microsoft Teams'),
+      // code editor (+ e)
+      e: toApp('Visual Studio Code'),
+      // file explorer / finder (+ f)
+      f: toApp('Finder'),
+      // terminal (+ t)
+      t: toApp('Ghostty'),
+      // mail app (+ m)
+      m: toApp('Microsoft Outlook'),
+      // System settings (+ ,)
+      ',': toApp('System Settings'),
+    }),
 
   // Local karabiner rules. TODO: rewrite them using karabiner.ts
   importJson(resolve(__dirname, './third-party-rules/auto-close-brackets-quotes.json')),

@@ -33,6 +33,16 @@
 						{
 							"key_code": "left_arrow"
 						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
+						}
 					]
 				},
 				{
@@ -49,6 +59,16 @@
 						},
 						{
 							"key_code": "left_arrow"
+						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
 						}
 					]
 				},
@@ -78,6 +98,16 @@
 						{
 							"key_code": "left_arrow"
 						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
+						}
 					]
 				},
 				{
@@ -95,6 +125,16 @@
 						{
 							"key_code": "left_arrow"
 						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
+						}
 					]
 				},
 				{
@@ -111,6 +151,16 @@
 						},
 						{
 							"key_code": "left_arrow"
+						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
 						}
 					]
 				},
@@ -140,6 +190,16 @@
 						{
 							"key_code": "left_arrow"
 						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
+						}
 					]
 				},
 				{
@@ -168,6 +228,16 @@
 						},
 						{
 							"key_code": "left_arrow"
+						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
 						}
 					]
 				},
@@ -198,6 +268,16 @@
 						{
 							"key_code": "left_arrow"
 						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
+						}
 					]
 				},
 				{
@@ -225,6 +305,16 @@
 						},
 						{
 							"key_code": "left_arrow"
+						}
+					],
+					"conditions": [
+						{
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							],
+							"type": "input_source_if"
 						}
 					]
 				}
