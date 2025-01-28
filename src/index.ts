@@ -84,5 +84,5 @@ writeToProfile('default', [
     }),
 
   // Local karabiner rules. TODO: rewrite them using karabiner.ts
-  importJson(resolve(__dirname, './third-party-rules/auto-close-brackets-quotes.json')),
+  // importJson(resolve(__dirname, './third-party-rules/auto-close-brackets-quotes.json')),
 ])
